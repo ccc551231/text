@@ -1,0 +1,603 @@
+$gray_color: #EBEBEB
+$pink_color: #EF513B
+//---------------------
+@mixin center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%)translateY(-50%)
+@mixin size($w,$h)
+  width: $w
+  height: $h
+//#header_index,section
+  display: none
+//#section-work
+  display: block
+//---------------------
+*
+  font-family: 'Ubuntu','微軟正黑體'
+  position: relative
+  //border: solid 1px black
+html,body
+  overflow-x: hidden
+  font-size: 16px
+  
+
+body
+  scroll: none
+  overflow: hidden
+
+  
+
+  
+//---------------------
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm
+  background-color: $pink_color
+  transition-duration: 0.5s 
+  height: 40px
+  border-bottom: solid 2px $pink_color
+  
+  
+  a
+    color: $gray_color
+    
+  ul.nav.navbar-nav.ml-auto
+    li
+      padding-left: 10px
+nav.navbar.navbar-default.fixed-top.navbar-top.navbar-expand-sm.color
+  background-color: transparent
+  width: 90%
+  left: 50%
+  transform: translateX(-50%)
+  a
+    color: $pink_color
+    font-weight: blod
+
+//---------------------
+header
+  position: relative
+  background-color: $gray_color
+  text-align: center
+  .logo
+    width: 80%
+    max-width: 450px
+    padding: 180px 0px
+  .flower
+    position: absolute
+    mix-blend-mode: multiply
+  .flower1
+    width: 10%
+    min-width: 50px
+    max-width: 80px
+    bottom: -180px
+    top: 10%
+    left: 15%
+    animation: flower_ani 3s infinite
+  @keyframes flower_ani
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(360deg)
+  .flower2
+    width: 8%
+    min-width: 50px
+    max-width: 80px
+    top: 75%
+    left: 10%
+    animation: flower_ani 2s infinite
+  @keyframes flower_ani
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(-180deg)
+  .flower3
+    width: 8%
+    min-width: 50px
+    max-width: 80px
+    top: 70%
+    right: 10%
+    animation: flower_ani 3s infinite
+  @keyframes flower_ani
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(360deg)
+  .flower4
+    width: 8%
+    min-width: 50px
+    max-width: 80px
+    top: 20%
+    right: 35%
+    animation: flower_ani 4s infinite
+  @keyframes flower_ani
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(-180deg)
+  .flower5
+    width: 10%
+    min-width: 50px
+    max-width: 80px
+    top: 10%
+    right: 10%
+    animation: flower_ani 5s infinite
+  @keyframes flower_ani
+    0%
+      transform: rotate(0deg)
+    100%
+      transform: rotate(360deg)
+  .explore
+    +center
+    top: 90%
+    color: $pink_color
+    font-size: 16px
+    opacity: 0
+    transition: 0.5s
+    &:after
+      content: "v"
+      display: block
+      transform: scaleY(0.5) scaleX(1.2)
+    &.at_top
+      opacity:1
+      
+//---------------------
+
+section#section-about
+ 
+  background-color: $pink_color
+  position: relative
+  .follow_icon
+    width: 80%
+    position: relative
+    top: calc(100%-2px)
+    z-index: 10
+    left: 10%
+  @media (max-width: 475px)
+    .follow_icon
+      width: 120%
+      left: -20%
+  .container
+    
+    transform: rotate(-8deg)scale(0.9)
+    //margin-bottom: 20px
+    .about_flower1
+      position: relative
+      width: 100px
+      margin-top: 50px
+
+    .col-sm-8
+      padding-left: 0px
+      padding-bottom: 0px
+      h1
+        font-size: 80px
+        margin-top: 50px
+        color: $gray_color
+    @media (max-width: 475px)
+      .about_flower1
+        width: 50px
+        margin-top: 0px
+      .col-sm-8
+        h1
+          font-size: 50px
+          margin-top: -30px
+          margin-left: 40px
+        
+        
+    .col-sm-8.offset-4
+      font-size: 30px
+      margin-top: 50px
+      color: $gray_color
+      .about_flower2
+        position: absolute
+        width: 100px
+        top: 0px
+        right: 10%
+    @media (max-width: 475px)
+      .col-sm-8.offset-4
+        font-size: 20px
+        margin-top: 30px
+        .about_flower2
+          width: 40px
+          margin-top: -50px
+          margin-left: 20px
+          right: -5%
+        
+      
+    .col-sm-4
+      padding: 0px
+      margin-bottom: 50px
+      .about_flower3
+        position: absolute
+        width: 100px
+        top: 0px
+        right: 10%
+      p
+        color: $gray_color
+    @media (max-width: 475px)
+      .col-sm-4
+        .about_flower3
+          width: 40px
+          margin-left: 50%
+          opacity: 0
+      .col-sm-4.offset-4.word3
+        &:after
+          content: ""
+          display: block
+          background-image: url(https://scontent-tpe1-1.xx.fbcdn.net/v/t1.6435-9/197189621_4192027990855874_4740416319808504857_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=OeFCZv8L4hEAX_Es04f&tn=e_oUZoeamG0wcRqi&_nc_ht=scontent-tpe1-1.xx&oh=9886884c6d38b4682ea396c2d0554356&oe=60CC61DB)
+          background-size: cover
+          height: 50px
+          width: 50px
+          margin-top: 50px
+          margin-left: -40px
+          
+          
+        
+        
+//---------------------       
+
+
+section#section-work
+  background-color: $pink_color
+  padding-top: 40px 
+  position: relative
+  @media (max-width: 475px)
+    padding-top: 20px 
+  #cat
+    width: 350px
+    position: absolute
+    right: 200px
+    z-index: 20
+    bottom: -20px
+  @media (max-width: 475px)
+    #cat
+      bottom: -20px
+      width: 250px
+  .col-sm-12.word
+    font-size: 30px
+    color: $gray_color
+  .follow_icon
+    transform:  translateX(-80px)
+    width: 80%
+    position: relative 
+    margin: 0px
+    z-index: 10
+    left: 10%
+  @media (max-width: 475px)
+    .follow_icon
+      width: 150%
+      margin-top: 100px
+      left: 0%
+  
+      
+  .container
+    //width: 185%
+    //transform: translateX(-50px)
+    
+
+    
+    .work1
+      height: 460px
+      padding: 10px
+      cursor: pointer
+      transition-duration: 0.3s
+      
+      
+      
+      
+      &:hover
+         &:before
+          opacity: 1
+      &:before
+        content:""
+        display: block
+        +size(100%,100%)
+        background-color: rgba(black , 0.5)
+        z-index: 5
+        opacity: 0
+        transition: 0.3s
+        
+    
+    
+    .work
+      height: 230px
+      padding: 10px
+      cursor: pointer
+      transition-duration: 0.3s
+      
+      &:hover
+        &:before
+          opacity: 1
+      &:before
+        content:""
+        display: block
+        +size(100%,100%)
+        background-color: rgba(black , 0.5)
+        z-index: 5
+        opacity: 0
+        transition: 0.3s
+      &.work2
+        
+    .work1
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.6435-9/200187072_4202526463139360_5838382385720656100_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_ohc=P7ZMF0Hn-40AX_ag3ss&_nc_ht=scontent.ftpe7-3.fna&oh=30c3a00612804d47e1f89ea88dee73b9&oe=60D1F9C1')
+      background-size: cover
+      background-position: center 
+      center
+    
+      
+      &:before
+        content:"繪本封面設計"
+        
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    @media (max-width: 475px)
+      .work1
+        border: solid 10px $pink_color
+      
+        
+    .work.work2
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.6435-9/197217181_4196644147060925_6626762736848517390_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=ICbi-PrvoasAX_LZf2k&_nc_ht=scontent.ftpe7-2.fna&oh=df84a4886e7a79e1bff48abd26044611&oe=60CE46D9')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"商品設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work3
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/198684837_4196869980371675_5596248231353829875_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=730e14&_nc_ohc=jrRnTvVWGlUAX8CXh1P&tn=zMaZBiAEka6WtBJR&_nc_ht=scontent.ftpe7-1.fna&oh=e53aaafd52a242e6dc166adfc835440f&oe=60CE95D8')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"網站設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work4
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/194858083_4196940833697923_1237188477209562804_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=ePM0qaQapSoAX-Qq_Lb&_nc_ht=scontent.ftpe7-1.fna&oh=957e1ac8a6a3566e6e4044d7f7e59d6b&oe=60CE50F6')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"民宿識別設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work5
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/198096136_4196984357026904_4186417343288779283_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=730e14&_nc_ohc=e8r-4ti5CdwAX_IwPzO&_nc_ht=scontent.ftpe7-1.fna&oh=339f2b0f6f95e5a4923bf01a080afe18&oe=60CDD790')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"寵物美容識別設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work6
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.6435-9/200182095_4197033797021960_6358896832612424952_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_ohc=4d4q6fxC8HsAX_Rzxy3&_nc_ht=scontent.ftpe7-2.fna&oh=8d22ea988e46187a17dddf47bb62c6a0&oe=60CF6285')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"畢製主題-迴路"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work7
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.6435-9/199289850_4202333299825343_7566225626023580890_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=730e14&_nc_ohc=leGwxSNEV-oAX9JkD0W&_nc_ht=scontent.ftpe7-3.fna&oh=b7e89079437d3a454c11372a79a2ea81&oe=60D1C115')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"unique識別設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work8
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.6435-9/199278375_4202376433154363_9141334438062781466_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=bHNK1HC4dzoAX_gl0VV&_nc_ht=scontent.ftpe7-2.fna&oh=c607e956fcf8d58b6eed85d46060522b&oe=60D10F3F')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"手繪蛋糕包裝"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work9
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/194698326_4202395539819119_5665093039980613653_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=730e14&_nc_ohc=Wl7D7uvq7fAAX_CdjII&_nc_ht=scontent.ftpe7-1.fna&oh=b64ea5339fb03e3b9747f53c50d4ccdd&oe=60D079ED')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"北極熊桌遊設計"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work10
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.6435-9/197345097_4202428723149134_5738988039296795250_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=730e14&_nc_ohc=5Krhx_g_df0AX-0LlA5&_nc_ht=scontent.ftpe7-3.fna&oh=2333f28875dc11b407f942ca34959d81&oe=60D22683')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"鴻海人才招募、尾牙視覺"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+    .work.work11
+      border: solid 3px $pink_color
+      background-image: url('https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.6435-9/200084433_4202479343144072_6516653618011653987_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_ohc=mDzgN4kxFKEAX-7EXdd&_nc_ht=scontent.ftpe7-2.fna&oh=f6055ba3bcde456d42dea593040003ad&oe=60D130B4')
+      background-size: cover
+      background-position: center 
+      center
+      &:before
+        content:"鴻海人才招募、尾牙視覺"
+        display: block
+        color: white
+        text-align: center
+        line-height: 200px
+        font-weight: bold
+  @media (max-width: 475px)
+    .col-sm-8
+      .row
+        .work
+          border: solid 10px $pink_color
+    .row
+      .col-sm-4.work
+        border: solid 10px $pink_color
+     
+      
+      
+      
+      
+    #about_flowe
+      width: 100%
+      height: 100%
+      position: absolute
+    
+
+#exampleModa2.modal.fade, #exampleModa3.modal.fade, #exampleModa4.modal.fade, #exampleModa5.modal.fade, #exampleModa6.modal.fade, #exampleModa7.modal.fade, #exampleModa8.modal.fade, #exampleModa9.modal.fade, #exampleModa10.modal.fade, #exampleModa11.modal.fade, #exampleModa1.modal.fade
+  .modal-header
+    background-color: #A2A2A2
+    color: white
+    button
+      background-color: transparent
+      color: white
+      border: solid 1px white
+      border-radius: 5px
+      
+
+
+  img
+    width: 100%
+  .inside_word
+    font-size: 20px
+    margin-top: 10px
+    color: #A2A2A2
+//----------------------------
+section#section-contect
+  background-color: $gray_color
+  padding-top: 40px 
+  position: relative
+  color: $pink_color
+  #Watering
+    position: absolute
+    width: 100px
+  .col-sm-12.word
+    font-size: 30px
+    //color: $pink_color
+    margin-bottom: 10px
+  .col-sm-6.mail
+    width: 100%
+    border: solid 2px $pink_color
+    padding: 10px
+    border-radius: 5px
+    transition-duration: 0.3s
+  
+    &:hover
+      box-shadow: 3px 3px 5px $pink_color
+    label
+      font-size: 23px
+    input, label,textarea
+      width: 100%
+      display: block
+    input, textarea
+      display: block
+      background-color: transparent
+      border: none
+      border: solid 3px $pink_color
+    button
+      background-color: $pink_color
+      color: $gray_color
+      border: none
+      margin-top: 10px
+  @media (max-width: 475px)
+    .col-sm-6.mail
+      width: 90%
+      left: 50%
+      transform: translateX(-50%)
+  
+  .col-sm-12.word5
+    font-size: 23px
+    margin-top: 40px
+  @media (max-width: 475px)
+    .col-sm-12.word5
+      font-size: 18px
+  .col-sm-7.offset-6.flower
+    margin-top: -50px
+    .flower
+      width: 150px
+      display: inline-block
+      transition-duration: 0.3s
+  @media (max-width: 475px)
+    .col-sm-7.offset-6.flower
+      margin-left: 0px
+      padding-left: 50px
+      margin-top: 20px
+      .flower
+        width: 100px
+        margin-bottom: 20px
+        
+  .col-sm-12.rock
+    margin-bottom: -30px
+    margin-top: -30px
+    .rock_icon
+      width: 130%
+      transform: translateX(-15%)
+  @media (max-width: 475px)
+    .col-sm-12.rock
+      .rock_icon
+        margin-bottom: -30px
+        
+      
+  
+      
+    
+//---------------------------------------------
+
+footer#footer
+  position: relative
+  text-align: center
+  background-color: $pink_color
+  width: 100%
+  .icon
+    //width: 100%
+    //+ab_center
+    max-width: 300px
+    margin-top: 50px
+    padding: 50px 0px
+  @media (max-width: 475px)
+    .icon
+      max-width: 200px
+    
